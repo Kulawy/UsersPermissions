@@ -94,7 +94,11 @@ namespace DataAccess
 
         public void UpdateUserPermission(int updatedId, UserPermission userPermission)
         {
-            throw new System.NotImplementedException();
+            var oldUserPermission = _db.UserPermission.Find(updatedId);
+            oldUserPermission.Id_Permission = userPermission.Id_Permission;
+            oldUserPermission.Id_User = userPermission.Id_User;
+            _db.Entry(oldUserPermission).State = EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public void DeleteUserPermission(UserR user, Permission permission)
