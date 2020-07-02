@@ -1,0 +1,2 @@
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB; Initial Catalog = DataAccessCore; Integrated Security=True; ConnectRetryCount=0"
+Microsoft.EntityFrameworkCore.SqlServer =OutputDir Models -Context UserPermissionsContext

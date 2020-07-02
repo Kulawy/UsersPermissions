@@ -17,7 +17,6 @@ namespace DataAccess
         {
             _db.UserR.Add(user);
             _db.SaveChanges();
-            
         }
 
         public UserR ReadUser(int userId)
@@ -118,5 +117,6 @@ namespace DataAccess
             }
 
         }
+      
     }
 }

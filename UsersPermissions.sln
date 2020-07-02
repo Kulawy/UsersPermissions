@@ -7,7 +7,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UsersPermissionsDB", "Users
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{DBCC61AA-D127-43EB-A369-66CCBE0588A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{AA1AE746-68BD-4A4A-A784-BF52DF22B539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{AA1AE746-68BD-4A4A-A784-BF52DF22B539}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessCore", "DataAccessCore\DataAccessCore.csproj", "{906FA802-0ACB-4BA4-91A6-C5662AAF3FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessCore.Tests", "DataAccessCore.Tests\DataAccessCore.Tests.csproj", "{E1841C0C-A189-4331-8DBF-6C37422BA78C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{AA1AE746-68BD-4A4A-A784-BF52DF22B539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA1AE746-68BD-4A4A-A784-BF52DF22B539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA1AE746-68BD-4A4A-A784-BF52DF22B539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906FA802-0ACB-4BA4-91A6-C5662AAF3FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906FA802-0ACB-4BA4-91A6-C5662AAF3FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906FA802-0ACB-4BA4-91A6-C5662AAF3FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906FA802-0ACB-4BA4-91A6-C5662AAF3FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1841C0C-A189-4331-8DBF-6C37422BA78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1841C0C-A189-4331-8DBF-6C37422BA78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1841C0C-A189-4331-8DBF-6C37422BA78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1841C0C-A189-4331-8DBF-6C37422BA78C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

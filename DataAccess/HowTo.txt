@@ -1,0 +1,4 @@
+﻿https://www.youtube.com/watch?v=o3ROFXgvXsM
+
+only on .Net Freamwork
+right on project -> Add New  Item -> ADO.NET Entity Data Model -> Wizard
