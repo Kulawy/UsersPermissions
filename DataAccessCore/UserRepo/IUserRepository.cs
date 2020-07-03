@@ -9,9 +9,15 @@ namespace DataAccessCore.UserRepo
 {
     public interface IUserRepository
     {
-        UserR CreateUser(UserR user);
+        void Save();
+        void CreateUser(UserR user);
         UserR ReadUser(int userId);
-        UserR UpdateUser(int updatedId, UserR user);
-        UserR DeleteUser(UserR user);
+        void UpdateUser(int updatedId, UserR newUser);
+        void DeleteUser(UserR user);
+
+        Task SaveAsync();
+        Task<UserR> ReadUserAsync(int userId);
+        Task<List<UserR>> ReadUsersAsync();
+        Task UpdateUserAsync(int updateId, UserR newUser);
     }
 }

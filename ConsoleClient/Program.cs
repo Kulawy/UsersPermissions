@@ -1,14 +1,15 @@
-﻿using DataAccess;
-using System;
+﻿using System;
+using DataAccess;
+using DataAccessCore.UserRepo;
 
-namespace Client
+namespace ConsoleClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("My App");
-            var repo = new Repository();
+            Console.WriteLine("DB first app");
+            var repo = new UserRepository();
             var user1 = repo.ReadUser(1);
             Console.WriteLine($"{user1.FirstName}");
             Console.ReadKey();

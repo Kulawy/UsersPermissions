@@ -24,11 +24,9 @@ namespace DataAccessCore.PermissionRepo
             _ctx.SaveChanges();
         }
 
-        public Permission CreatePermission(Permission permission)
+        public void CreatePermission(Permission permission)
         {
-            var entity = _ctx.Permission.Add(permission);
-            Save();
-            return entity.Entity;
+            _ctx.Permission.Add(permission);
         }
 
         public Permission ReadPermission(int permissionId)
@@ -58,13 +56,6 @@ namespace DataAccessCore.PermissionRepo
             await _ctx.SaveChangesAsync();
         }
 
-        public async Task<Permission> CreatePermissionAsync(Permission permission)
-        {
-            var ifOk = _ctx.Permission.Add(permission);
-            await _ctx.SaveChangesAsync();
-            return ifOk.Entity;
-        }
-
         public async Task<Permission> ReadPermissionAsync(int permissionId)
         {
             return await _ctx.Permission.FindAsync(permissionId);
@@ -80,7 +71,9 @@ namespace DataAccessCore.PermissionRepo
             var entity = await _ctx.Permission.FirstOrDefaultAsync(p => p.Id == updatedId);
             if (entity != null)
             {
-                entity = permission;
+                entity.PermissionName = permission.PermissionName;
+                entity.UserPermission = permission.UserPermission;
+                entity.RoleName = permission.RoleName;
             }
         }
 
