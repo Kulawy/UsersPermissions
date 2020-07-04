@@ -27,17 +27,17 @@ namespace DataAccessCore.Tests
         [Fact]
         public async Task AddPermissionTest()
         {
+            var permissionNameTest = "TestPerm";
             var repo = new PermissionRepository();
             var perm = new Permission()
             {
-                Id = 0,
-                PermissionName = "Administrator",
-                RoleName = "Admin"
+                PermissionName = permissionNameTest,
+                RoleName = "TestRole"
             };
             repo.CreatePermission(perm);
             await repo.SaveAsync();
-            //var addedPerm = await repo.ReadPermissionAsync(1);
-            //Assert.True(addedPerm.Id == 1);
+            var addedPerm = await repo.ReadPermissionAsync(perm.Id);
+            Assert.True(addedPerm.RoleName == permissionNameTest);
         }
 
     }
